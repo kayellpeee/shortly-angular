@@ -4,10 +4,9 @@ angular.module('shortly.links', [])
   // Your code here
   $scope.data = {};
   $scope.getLinks = function(){
-
+    Links.queryServerforLinks().then(function(response){
+      $scope.data.links = response.data;
+    });
   };
-})
-
-.directive("load", function(){
   $scope.getLinks();
 });
