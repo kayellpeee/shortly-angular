@@ -10,11 +10,11 @@ angular.module('shortly.services', [])
     });
   };
 
-  var addLink = function(link){
+  var addLink = function(url){
     return $http({
       method: 'POST',
       url: '/api/links',
-      data: {link: link}
+      data: {url: url}
     }).then(function (resp) {
       $location.path('/links');
     });
