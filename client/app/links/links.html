@@ -1,6 +1,6 @@
 <div id='container'>
   <h1>Links</h1>
-  <div ng-repeat="link in data.links">
+  <div ng-repeat="link in data.links | orderBy:'visits'">
     <shortened-link></shortened-link>
   </div>
 </div>
