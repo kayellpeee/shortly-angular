@@ -12,7 +12,12 @@ angular.module('shortly.links', [])
         console.error(error);
       });
   };
-
   $scope.getLinks();
+})
 
+.directive('shortenedLink', function(){
+  return {
+    restrict: 'E',
+    templateUrl: 'app/links/linksDirective.html'
+  }
 });
